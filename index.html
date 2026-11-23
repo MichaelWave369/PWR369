@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PWR-369 · Pulse Wave Return Lab</title>
+<link rel="stylesheet" href="./styles/main.css"></head><body>
+<header><div><div class="eyebrow">Φ / SYNTHETIC SYSTEMS LAB / V0.2</div><h1>Pulse <span style="color:#9de4da">→</span> Wave <span style="color:#9de4da">→</span> Return</h1><p>Nested Bubble Gear · Altermath junction · residual memory</p></div><div class="pill">COMPUTATIONAL ANALOGY · NOT A BODY SENSOR</div></header>
+<main>
+<div class="panel stage"><canvas id="field" aria-label="Live synthetic wave field with outgoing and returning pulses"></canvas><div class="overlay"><div class="chip"><i style="background:#ffba7a"></i>Outbound</div><div class="chip"><i style="background:#65e0e2"></i>Return</div><div class="chip"><i style="background:#bca5fd"></i>Residue</div><div class="chip">Boundary = Altermath interface (metaphor)</div></div></div>
+<div class="panel controls"><h2>Shape the relationships</h2>
+<div class="control"><label for="rate">Synthetic pulse rate <output id="rate-val">66 / min</output></label><input id="rate" type="range" min="30" max="125" value="66"></div>
+<div class="control"><label for="reflect">Return fraction · k <output id="reflect-val">0.65</output></label><input id="reflect" type="range" min="0" max="100" value="65"></div>
+<div class="control"><label for="speed">Propagation speed <output id="speed-val">1.0×</output></label><input id="speed" type="range" min="30" max="160" value="100"></div>
+<div class="control"><label for="memory">Residue persistence · ρ <output id="memory-val">0.78</output></label><input id="memory" type="range" min="0" max="95" value="78"></div>
+<div class="control"><label for="render">Fuzzy-dot render gain <output id="render-val">0.70</output></label><input id="render" type="range" min="0" max="100" value="70"></div>
+<div class="buttons"><button id="toggle">Pause simulation</button><button id="reset">Reset cycle</button><button id="export">Export CSV</button></div>
+<div class="statgrid"><div class="stat"><strong id="pCount">0</strong><small>Pulses</small></div><div class="stat"><strong id="rCount">0</strong><small>Returns</small></div><div class="stat"><strong id="mLevel">0.00</strong><small>Residue</small></div><div class="stat"><strong id="simTime">0.0 s</strong><small>Model time</small></div></div>
+<p class="note">Try setting <b>Return fraction</b> to zero. The inward rings disappear. Increase it again and watch the delayed response. Adjust <b>render gain</b> to change how vividly the same internal state is drawn.</p></div>
+</main>
+<section class="info"><article><h2>Six verbs, one feedback cycle</h2><div class="steps"><span>Ignite</span><b>→</b><span>Radiate</span><b>→</b><span>Meet</span><b>→</b><span>Alter</span><b>→</b><span>Echo</span><b>→</b><span>Remember</span></div><p>A pulse travels outward to a boundary. At the boundary, some of it returns after a delay. The return can leave a decaying trace that changes future synthetic pulses. No energy is created by reflection.</p></article><article><h2>Important distinction</h2><p>The point field borrows visual vocabulary from the user's description of RGB “fuzzy dots,” nested rings and gears. The animation is <strong>not</strong> a recording of the heart, brain, electromagnetic fields or other realms.</p><p>Real heart, breathing and brain rhythms have measurable interactions. Their exact relationship to a person's inner visual imagery requires independent evidence.</p></article></section>
+<script type="module" src="./src/app.mjs"></script></body></html>
